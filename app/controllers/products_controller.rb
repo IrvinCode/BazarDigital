@@ -35,6 +35,16 @@ class ProductsController < ApplicationController
       end
     end
 
+    def destroy
+        @product = Product.find(params[:id])
+
+        if @product.destroy()
+          redirect_to products_path, notice: "Tu producto '#{@product.title}' se ha eliminado correctamente", status: :see_other
+        else
+          render :edit, status: :unprocessable_entity
+        end
+    end
+
     private
 
     def product_params

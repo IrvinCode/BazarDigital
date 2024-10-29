@@ -5,3 +5,10 @@
 <p class='description'>Detalle: <%= @product.description %></p>
 
 <span class='price'>Precio: $<%= @product.price %></span>
+
+<div>
+    <%= link_to 'Borrar producto', product_path(@product.id), data: {
+        turbo_method: :delete,
+        turbo_confirm: '¿Estás seguro de eliminar el producto?'
+    } %>
+</div>
