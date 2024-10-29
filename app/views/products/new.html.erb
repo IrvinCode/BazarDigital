@@ -15,6 +15,11 @@
     <%= f.label :price %>
     <%= f.number_field :price %>
   </div>
-  
+
+  <% @product.errors.full_messages.each do |error| %>
+    <div>
+        <%= error%>
+    </div>
+  <% end %>
   <%= f.submit "Añadir" %>
 <% end %>
