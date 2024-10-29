@@ -14,6 +14,11 @@
     <%= f.number_field :price %>
   </div>
 
+  <div>
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+  </div>
+
   <% @product.errors.full_messages.each do |error| %>
     <div>
         <%= error%>
