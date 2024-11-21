@@ -64,7 +64,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], "Tu producto 'OnePlus 7T' se ha creado correctamente!"
+    assert_equal flash[:notice], "Tu producto 'OnePlus 7T' se ha actualizado correctamente!"
   end
 
   test "does not allow to update a product with an invalid field" do
